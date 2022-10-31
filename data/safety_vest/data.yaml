@@ -1,0 +1,5 @@
+train: ../train/images
+val: ../valid/images
+
+nc: 4
+names: ['capacete', 'colete_refletivo', 'sem_capacete', 'sem_colete_refletivo']
