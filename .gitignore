@@ -7,3 +7,4 @@ data/chv
 
 # cache
 src/common/__pycache__
+notebooks/.ipynb_checkpoints/
