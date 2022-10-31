@@ -2,23 +2,7 @@
 cvh:
   name: CHV Dataset
   source_link: https://github.com/ZijianWang1995/PPE_detection
-  download_link: None
+  download_link: https://drive.google.com/file/d/1fdGn67W0B7ShpBDbbQpUF0ScPQa4DR0a/view
   folder_name: chv
   annotations_directory: annotations
   images_directory: images
-  annotations_format: YOLO
-
-Safety_vest:
-  name: Safety vest v4 Image Dataset
-  source_link: https://universe.roboflow.com/work-safe-project/safety-vest---v4/dataset/2
-  download_link: None
-  folder_name: safety_vest
-  annotations_directory:
-  - test/labels
-  - train/labels
-  - valid/labels
-  images_directory:
-  - test/images
-  - train/images
-  - valid/images
-  annotations_format: YOLO
