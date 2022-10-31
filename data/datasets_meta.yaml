@@ -1,25 +1,33 @@
-# Here's some reference metadata about datasets
+# Datasets metadata
 
 cvh:
   name: CHV Dataset
   source_link: https://github.com/ZijianWang1995/PPE_detection
   download_link: None
   folder_name: chv
-  annotations_directory: annotations
+  annotations_directory: labels
   images_directory: images
   annotations_format: YOLO
+  channels: BGR
+  classes:
+    0: person
+    1: vest
+    2: blue helmet
+    3: red helmet
+    4: white helmet
+    5: yellow helmet
 
 safety_vest:
   name: Safety vest - v4 Computer Vision Project
   source_link: https://universe.roboflow.com/work-safe-project/safety-vest---v4/dataset/2/download
   download_link: None
   folder_name: safety_vest
-  annotations_directory:
-  - test/labels
-  - train/labels
-  - valid/labels
-  images_directory:
-  - test/images
-  - train/images
-  - valid/images
+  annotations_directory: labels
+  images_directory: images
   annotations_format: YOLO
+  channels: BGR
+  classes:
+    0: capacete  # голова в каске
+    1: colete_refletivo  # в желете
+    2: sem_capacete  # голова без каски
+    3: sem_colete_refletivo  # не в желете
