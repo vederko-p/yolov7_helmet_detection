@@ -4,6 +4,7 @@
 
 # datasets
 data/chv
+data/safety_vest
 
 # cache
 src/common/__pycache__
