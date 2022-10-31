@@ -1,6 +1,6 @@
 # Datasets metadata
 
-cvh:
+chv:
   name: CHV Dataset
   source_link: https://github.com/ZijianWang1995/PPE_detection
   download_link: None
@@ -16,6 +16,13 @@ cvh:
     3: red helmet
     4: white helmet
     5: yellow helmet
+  classes_ratio:
+    0: 3887
+    1: 1784
+    2: 508
+    3: 536
+    4: 1195
+    5: 1299
 
 safety_vest:
   name: Safety vest - v4 Computer Vision Project
@@ -31,3 +38,8 @@ safety_vest:
     1: colete_refletivo  # в желете
     2: sem_capacete  # голова без каски
     3: sem_colete_refletivo  # не в желете
+  classes_ratio:
+    0: 1889
+    1: 542
+    2: 809
+    3: 2080
