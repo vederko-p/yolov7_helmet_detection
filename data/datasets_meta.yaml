@@ -1,0 +1,6 @@
+# Here's some reference metadata about datasets
+cvh:
+  name: CHV Dataset
+  source_link: https://github.com/ZijianWang1995/PPE_detection
+  download_link: https://drive.google.com/file/d/1fdGn67W0B7ShpBDbbQpUF0ScPQa4DR0a/view
+  folder_name: chv
