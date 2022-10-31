@@ -1,2 +1,9 @@
+# common
 .idea
 .vscode
+
+# datasets
+data/chv
+
+# cache
+src/common/__pycache__
