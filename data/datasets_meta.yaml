@@ -5,9 +5,9 @@ chv:
   source_link: https://github.com/ZijianWang1995/PPE_detection
   download_link: None
   folder_name: chv
-  images_directory: images_source
-  annotations_directory: labels_source
-  annotations_format: YOLO
+  images_directory: images
+  labels_directory: labels_source
+  labels_format: YOLO
   channels: BGR
   classes:
     0: person
@@ -29,9 +29,9 @@ safety_vest:
   source_link: https://universe.roboflow.com/work-safe-project/safety-vest---v4/dataset/2/download
   download_link: None
   folder_name: safety_vest
-  images_directory: images_source
-  annotations_directory: labels_source
-  annotations_format: YOLO
+  images_directory: images
+  labels_directory: labels_source
+  labels_format: YOLO
   channels: BGR
   classes:
     0: capacete  # голова в каске
