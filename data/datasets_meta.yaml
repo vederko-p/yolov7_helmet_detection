@@ -12,10 +12,10 @@ chv:
   classes:
     0: person
     1: vest
-    2: blue helmet
-    3: red helmet
-    4: white helmet
-    5: yellow helmet
+    2: blue helmet  # только каска
+    3: red helmet  # только каска
+    4: white helmet  # только каска
+    5: yellow helmet  # только каска
   classes_ratio:
     0: 3887
     1: 1784
