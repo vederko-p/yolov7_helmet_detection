@@ -6,10 +6,14 @@
 data/chv
 data/safety_vest
 
+# dataset indexes
+src/dataset/last_indexes
+
 # cache
 src/common/__pycache__
 notebooks/.ipynb_checkpoints/
 src/utils/__pycache__/
+notebooks/temp.ipynb
 
 # models
 src/models/yolov7
