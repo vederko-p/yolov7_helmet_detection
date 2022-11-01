@@ -6,7 +6,7 @@ from time import strftime
 
 from common.dataset_config import DATASETS_DIRECTORY_PATH
 from common.dataset_config import DATASETS_METADATA_FILENAME
-from utils import yaml_utils
+from utils import yaml_utils, folders_utils
 
 
 def indexing(dataset_path: str, dataset_meta_file_name: str) -> dict:
@@ -32,16 +32,16 @@ def indexing(dataset_path: str, dataset_meta_file_name: str) -> dict:
 
 
 def main():
-    indexing_output = indexing(
+    index_output = indexing(
         DATASETS_DIRECTORY_PATH, DATASETS_METADATA_FILENAME)
 
-    indexing_folder_name = 'last_indexes'
-    if indexing_folder_name not in os.listdir('.'):
-        os.mkdir(indexing_folder_name)
+    index_folder_path = '.'
+    index_folder_name = 'last_indexes'
+    folders_utils.make_directory(index_folder_path, index_folder_name)
 
     current_time = strftime('%y-%m-%d_%H-%M-%S')
-    indexing_filepath = f'./{indexing_folder_name}/indexing_{current_time}.yaml'
-    yaml_utils.save_yaml(indexing_filepath, indexing_output)    
+    index_filepath = f'./{index_folder_name}/indexing_{current_time}.yaml'
+    yaml_utils.save_yaml(index_filepath, index_output)    
 
 
 if __name__ == '__main__':
