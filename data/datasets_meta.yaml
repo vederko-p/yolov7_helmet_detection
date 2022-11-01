@@ -5,8 +5,8 @@ chv:
   source_link: https://github.com/ZijianWang1995/PPE_detection
   download_link: None
   folder_name: chv
-  annotations_directory: labels
-  images_directory: images
+  images_directory: images_source
+  annotations_directory: labels_source
   annotations_format: YOLO
   channels: BGR
   classes:
@@ -29,8 +29,8 @@ safety_vest:
   source_link: https://universe.roboflow.com/work-safe-project/safety-vest---v4/dataset/2/download
   download_link: None
   folder_name: safety_vest
-  annotations_directory: labels
-  images_directory: images
+  images_directory: images_source
+  annotations_directory: labels_source
   annotations_format: YOLO
   channels: BGR
   classes:
