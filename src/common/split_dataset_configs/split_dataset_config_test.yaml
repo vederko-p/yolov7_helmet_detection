@@ -25,7 +25,7 @@ datasets:
         inner_classes:
         - 1
 split:
-  indexing_path: /home/maksim/Desktop/Projects/neft_project/yolov7_helmet_detection/src/dataset/last_indexes/indexing_22-11-01_23-38-24.yaml
+  indexing_path: /home/maksim/Desktop/Projects/neft_project/yolov7_helmet_detection/src/dataset/last_indexes/indexing_22-11-02_21-44-50.yaml
   parts:
     test: 0.05
     train: 0.8
