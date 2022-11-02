@@ -12,7 +12,7 @@ from utils import yaml_utils, folders_utils
 def indexing(dataset_path: str, dataset_meta_file_name: str) -> dict:
     meta_file_path = os.path.join(dataset_path, dataset_meta_file_name)
     ds_metadata = yaml_utils.read_yaml(meta_file_path)
-    indexes_dict = {}
+    indexes_dict = {'dataset_path': dataset_path}
     for ds_key, ds_meta in ds_metadata.items():
         ds_labels_path = os.path.join(
             dataset_path,
