@@ -20,8 +20,7 @@ def indexing(dataset_path: str, dataset_meta_file_name: str) -> dict:
             ds_meta['labels_directory'])
         labels_files = os.listdir(ds_labels_path)
         labels_ds_path = map(
-            lambda lbl_loc_p: os.path.join(
-                ds_meta['folder_name'], lbl_loc_p),
+            lambda lbl_loc_p: os.path.join(ds_labels_path, lbl_loc_p),
             labels_files)
         ds_indexing_dict = {
             index: lbl_p for index, lbl_p
