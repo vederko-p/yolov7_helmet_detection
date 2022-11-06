@@ -5,6 +5,7 @@
 # datasets
 data/chv
 data/safety_vest
+data/yolo_collected_datasets
 
 # dataset indexes
 src/dataset/last_indexes
@@ -17,3 +18,4 @@ notebooks/temp.ipynb
 
 # models
 src/models/yolov7
+src/models/weights
