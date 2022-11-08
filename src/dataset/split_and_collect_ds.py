@@ -1,6 +1,6 @@
 import os
 import sys
-sys.path.append('../')
+sys.path.append('../../')
 
 from random import sample
 from time import strftime
@@ -301,18 +301,27 @@ def split_and_collect_labels(
         Dataset meta.
     """
     # metainfo:
+    print('Collect split settings ... ', end='')
     split_params = split_config['split']
     indexes = files_utils.read_yaml(split_params['indexing_path'])
     dataset_path = indexes['dataset_path']
+    print('Done')
     # main folder for yolo files with paths:
+    print('Make folder for new split ... ', end='')
     splited_files_folder_path = make_yolo_dir_with_paths(
         dataset_path)
+    print('Done')
+    print('Collect all datasets into one and split:')
     for ds_key, class_params in split_config['datasets'].items():
+        print(f'  ds: {ds_key}:')
         # dataset split:
+        print('    split indexes ... ', end='')
         split_names, splited_indexes = split_indexes(
             list(indexes[ds_key].keys()), split_params['parts'],
             len(indexes[ds_key]), split_params['random_state'])
+        print('Done')
         # reformat and save labels:
+        print('    reformat and save labels ... ', end='')
         current_ds_folder_path = os.path.join(dataset_path, ds_key)
         ds_classes_meta = get_ds_classes_meta(
             split_config['datasets'][ds_key]['classes'],
@@ -321,26 +330,29 @@ def split_and_collect_labels(
         reformat_labels(
             dataset_path, ds_key, splited_indexes, indexes[ds_key],
             ds_classes_meta, lbls_dir)
-        lbls_dir
         new_ds_indx_paths = {
             i: pth.replace(
                 ds_meta[ds_key]['labels_directory'],
                 ds_meta[ds_key]['images_directory'])
             for i, pth in indexes[ds_key].items()}
+        print('Done')
         # add splited filepaths into sought files with paths:
+        print('    fill filespaths ... ', end='')
         out_files_paths = add_paths_to_file(
             splited_indexes, split_names,
             splited_files_folder_path,
             new_ds_indx_paths,
             current_ds_folder_path)
-        break
+        print('Done')
     # make data file to train yolo:
+    print('Make data file to train yolo ... ', end='')
     yolo_data_filepath = os.path.join(
         splited_files_folder_path, 'yolo_data.yaml')
     make_yolo_data(
         yolo_data_filepath, split_config['class_mapping'],
         split_names, out_files_paths, dataset_path
     )
+    print('Done')
 
 
 def main():
@@ -354,3 +366,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# 1. перепроверить, что все работает
+# 2. Оформить инструкцию
+# 3. Оформить Readme
