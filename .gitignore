@@ -15,6 +15,7 @@ src/common/__pycache__
 notebooks/.ipynb_checkpoints/
 src/utils/__pycache__/
 notebooks/temp.ipynb
+src/annots_formats/__pycache__/
 
 # models
 src/models/yolov7
