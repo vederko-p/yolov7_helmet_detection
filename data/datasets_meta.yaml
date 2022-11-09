@@ -1,0 +1,45 @@
+# Datasets metadata
+
+chv:
+  name: CHV Dataset
+  source_link: https://github.com/ZijianWang1995/PPE_detection
+  download_link: None
+  folder_name: chv
+  images_directory: images
+  labels_directory: labels_source
+  labels_format: YOLO
+  channels: BGR
+  classes:
+    0: person
+    1: vest
+    2: blue helmet  # только каска
+    3: red helmet  # только каска
+    4: white helmet  # только каска
+    5: yellow helmet  # только каска
+  classes_ratio:
+    0: 3887
+    1: 1784
+    2: 508
+    3: 536
+    4: 1195
+    5: 1299
+
+safety_vest:
+  name: Safety vest - v4 Computer Vision Project
+  source_link: https://universe.roboflow.com/work-safe-project/safety-vest---v4/dataset/2/download
+  download_link: None
+  folder_name: safety_vest
+  images_directory: images
+  labels_directory: labels_source
+  labels_format: YOLO
+  channels: BGR
+  classes:
+    0: capacete  # голова в каске
+    1: colete_refletivo  # в желете
+    2: sem_capacete  # голова без каски
+    3: sem_colete_refletivo  # не в желете
+  classes_ratio:
+    0: 1889
+    1: 542
+    2: 809
+    3: 2080
