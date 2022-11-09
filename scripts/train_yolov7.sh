@@ -1,9 +1,10 @@
 # start yolo training
-cd src/models/yolov7
+YOLO_DIR="../src/models/yolov7"
+cd $YOLO_DIR
 
-WEIGHTS_FILEPATH="/home/maksim/Desktop/Projects/neft_project/yolov7_helmet_detection/src/models/weights/yolov7/yolov7_training.pt"
+WEIGHTS_FILEPATH="/home/skibinmv/Desktop/cis/yolov7_helmet_detection/src/models/weights/yolov7_training.pt"
 
-DATA_FILEPATH="/home/maksim/Desktop/Projects/neft_project/yolov7_helmet_detection/data/yolo_collected_datasets/22-11-07_00-26-00/yolo_data.yaml"
+DATA_FILEPATH="/home/skibinmv/Desktop/cis/yolov7_helmet_detection/data/yolo_collected_datasets/22-11-08_16-21-19/yolo_data.yaml"
 
-python3 train.py --batch-size 4 --weights $WEIGHTS_FILEPATH --epochs 3 --data $DATA_FILEPATH
+python3 train.py --workers 8 --device 0 --batch-size 2 --weights $WEIGHTS_FILEPATH --epochs 3 --data $DATA_FILEPATH
 
