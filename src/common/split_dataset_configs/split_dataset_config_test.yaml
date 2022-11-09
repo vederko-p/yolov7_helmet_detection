@@ -1,0 +1,23 @@
+datasets:
+  chv:
+    classes:
+      0: [0]
+      1: [1]
+      2: [2, 5]
+  safety_vest:
+    classes:
+      0: [0]
+      1: [1]
+
+split:
+  indexing_path: /home/maksim/Desktop/Projects/neft_project/yolov7_helmet_detection/src/dataset/last_indexes/indexing_22-11-06_23-11-18.yaml
+  parts:
+    test: 0.05
+    train: 0.8
+    val: 0.15
+  random_state: 15
+
+class_mapping:
+  0: Person
+  1: Vest
+  2: Helmet
